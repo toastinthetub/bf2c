@@ -1,4 +1,4 @@
-use std::{fs, io::{Error, ErrorKind, Write}, path::{Path, PathBuf}, process::{Command, Stdio}};
+use std::{fs, io::Write, path::PathBuf, process::{Command, Stdio}};
 
 const TAB: &str = "     ";
 const HEADERS: [&str; 4] = [
@@ -7,10 +7,6 @@ const HEADERS: [&str; 4] = [
     "     unsigned char* ptr = tape;\n\n",
     "     return 0;\n}"
 ];
-
-pub enum CompilerFlag {
-
-}
 
 #[derive(Clone)]
 pub struct Program {
@@ -36,21 +32,6 @@ impl Program {
             brainfuck,
             output,
             c
-        }
-    }
-
-    pub fn edit(&mut self, input: Option<PathBuf>, output: Option<PathBuf>) {
-        match input {
-            Some(input) => {
-                self.input = input
-            }
-            _ => {}
-        }
-        match output {
-            Some(output) => {
-                self.output = output
-            }
-            _ => {}
         }
     }
 

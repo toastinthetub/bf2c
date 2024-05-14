@@ -1,9 +1,5 @@
 mod utils;
-
 use std::env;
-use std::fs::File;
-use std::io::{Write, Read};
-
 use utils::Program;
 
 fn main() {
