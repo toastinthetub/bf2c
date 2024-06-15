@@ -1,3 +1,4 @@
-simple brainfuck to C compiler
+# brainfuck to C transpiler
 
-you must have gcc installed for this to work.
+GCC does the heavy lifting. specify `-O<NUMBER>` at the end of a command to
+specify a GCC optimization. For example `-O4` 
